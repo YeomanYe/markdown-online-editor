@@ -70,6 +70,10 @@ export default {
       }
       this.vditor = new Vditor('vditor', options)
       this.vditor.focus()
+      setTimeout(() => {
+        const mdHtml = this.vditor.getHTML()
+        localStorage.setItem('vditorHtml', mdHtml)
+      }, 3000)
     },
     onloadCallback(oEvent) {
       const currentTarget = oEvent.currentTarget

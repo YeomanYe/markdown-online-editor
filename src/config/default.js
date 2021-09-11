@@ -48,10 +48,14 @@ const echartsConf = {
 
 const echartsDemoJsonStr = JSON.stringify(echartsConf, null, 2)
 
-export default `# 欢迎使用 \`Arya\` 在线 Markdown 编辑器
+export default `
+<section>
+# 欢迎使用 \`Arya\` 在线 Markdown 编辑器
 
 [Arya](https://markdown.lovejade.cn/?utm_source=markdown.lovejade.cn)，是一款基于 \`Vue\`、\`Vditor\`，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、微信公众号特制的 HTML 等等。
 
+</section>
+<section>
 ---
 
 ## 如何使用
@@ -67,7 +71,8 @@ export default `# 欢迎使用 \`Arya\` 在线 Markdown 编辑器
 
 如果您用作 \`PPT\` 预览（入口在\`设置\`中），需要注意，这里暂还不能支持各种图表的渲染；您可以使用 \`---\` 来定义水平方向上幻灯片，用 \`--\` 来定义垂直幻灯片；更多设定可以参见 [RevealJs 文档](https://github.com/hakimel/reveal.js#table-of-contents)。
 
-
+</section>
+<section>
 ---
 
 ## 什么是 Markdown
@@ -75,6 +80,8 @@ export default `# 欢迎使用 \`Arya\` 在线 Markdown 编辑器
 [Markdown](https://nicelinks.site/tags/Markdown/?utm_source=markdown.lovejade.cn) 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号，以最小的输入代价，生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，**粗体**、*斜体* 或者[超文本链接](https://vue-cli3.lovejade.cn/explore/)，更棒的是，它还可以：
 
 ---
+</section>
+<section>
 
 ### 1. 制作待办事宜 \`Todo\` 列表
 
@@ -91,6 +98,8 @@ export default `# 欢迎使用 \`Arya\` 在线 Markdown 编辑器
 - [x] 🦑 支持五线谱、及[部分站点、视频、音频解析](https://github.com/b3log/vditor/issues/117?utm_source=hacpai.com#issuecomment-526986052)；
 - [x] 🌟 增加对**所见即所得**编辑模式的支持(\`⌘-⇧-M\`)；
 
+</section>
+<section>
 ---
 
 ### 2. 书写一个质能守恒公式[^LaTeX]
@@ -100,6 +109,8 @@ E=mc^2
 $$
 
 ---
+</section>
+<section>
 
 ### 3. 高亮一段代码[^code]
 
@@ -180,4 +191,5 @@ ${echartsDemoJsonStr}
 总而言之，不同于其它*所见即所得*的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。**Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。** 目前它已经成为世界上最大的技术分享网站 \`GitHub\` 和 技术问答网站 \`StackOverFlow\` 的御用书写格式，而且越发流行，正在在向各行业渗透。
 
 最新更新于 2019.08.21
+</section>
 `

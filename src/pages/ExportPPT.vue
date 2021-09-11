@@ -3,12 +3,12 @@
 <template>
   <div class="export-ppt">
     <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="---" data-separator-vertical="--">
+      <div class="slides" v-html="savedHtml">
+        <!-- <section data-markdown data-separator="#---#" data-separator-vertical="#--#">
           <section data-template>
             {{ savedMdContent }}
           </section>
-        </section>
+        </section> -->
       </div>
     </div>
   </div>
@@ -25,13 +25,15 @@ export default {
 
   data() {
     return {
-      savedMdContent: ''
+      savedMdContent: '',
+      savedHtml: ''
     }
   },
 
   created() {
     this.$utils.updateHtmlStyle()
     this.savedMdContent = localStorage.getItem('vditorvditor')
+    this.savedHtml = localStorage.getItem('vditorHtml')
   },
 
   components: {},
