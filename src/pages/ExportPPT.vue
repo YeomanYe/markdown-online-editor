@@ -1,9 +1,9 @@
 <!-- @format -->
 
 <template>
-  <div class="export-ppt">
+  <div id="vditor" class="export-ppt" :class="{ fullScreen: isFullScreen }">
     <div class="reveal">
-      <div class="slides" v-html="savedHtml">
+      <div class="slides" v-html="savedHtml" contenteditable="true">
         <!-- <section data-markdown data-separator="#---#" data-separator-vertical="#--#">
           <section data-template>
             {{ savedMdContent }}
@@ -26,7 +26,8 @@ export default {
   data() {
     return {
       savedMdContent: '',
-      savedHtml: ''
+      savedHtml: '',
+      isFullScreen: false
     }
   },
 
@@ -40,6 +41,9 @@ export default {
 
   mounted() {
     this.initReveal()
+    document.onfullscreenchange = evt => {
+      this.isFullScreen = !!document.fullscreenElement
+    }
   },
 
   methods: {
@@ -87,6 +91,15 @@ export default {
     height: calc(100vh - 60px);
     h1 {
       font-size: 2em !important;
+    }
+    section {
+      max-height: 100%;
+      overflow: auto;
+    }
+  }
+  &.fullScreen {
+    .reveal {
+      height: 100%;
     }
   }
 }

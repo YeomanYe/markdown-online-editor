@@ -3,10 +3,7 @@
 <template>
   <section class="header-wrapper">
     <h1 class="header-area">
-      <a
-        href="https://markdown.lovejade.cn/?utm_sourece=markdown.lovejade.cn&pid=main-title"
-        class="header-link"
-      >
+      <a href="/" class="header-link">
         <img class="mark-markdown" src="@assets/images/markdown.png" alt="在线 Markdown 编辑器" />
         <strong v-if="!isMobile" class="header-text">{{ titleText }}</strong>
       </a>
@@ -74,9 +71,7 @@
             </el-dropdown-item>
             <el-dropdown-item command="/export/ppt" divided>
               <icon class="dropdown-icon" name="preview" />
-              <a href="/export/ppt" target="_blank" class="dropdown-text">{{
-                exportTextMap['/export/ppt']
-              }}</a>
+              <a href="/export/ppt" class="dropdown-text">{{ exportTextMap['/export/ppt'] }}</a>
             </el-dropdown-item>
             <el-dropdown-item command="/export/html" disabled divided>
               <icon class="dropdown-icon" name="download" />
