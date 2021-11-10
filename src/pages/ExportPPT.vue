@@ -70,7 +70,7 @@ export default {
               return !!document.querySelector('[data-markdown]')
             }
           },
-          { src: `${revealSourcePath}/plugin/highlight/highlight.js`, async: true },
+          // { src: `${revealSourcePath}/plugin/highlight/highlight.js`, async: true },
           { src: `${revealSourcePath}/plugin/search/search.js`, async: true },
           { src: `${revealSourcePath}/plugin/zoom-js/zoom.js`, async: true },
           { src: `${revealSourcePath}/plugin/notes/notes.js`, async: true }

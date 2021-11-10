@@ -71,8 +71,13 @@ export default {
       this.vditor = new Vditor('vditor', options)
       this.vditor.focus()
       setTimeout(() => {
-        const mdHtml = this.vditor.getHTML()
-        localStorage.setItem('vditorHtml', mdHtml)
+        // const mdHtml = this.vditor.getHTML()
+        const vHtml = document.querySelector('.vditor-preview .vditor-reset')
+        const hl = vHtml.innerHTML.replaceAll(
+          /<pre><code class="(language-mermaid|language-echarts)"[\s\S]*?>([\s\S]+?)<\/code><\/pre>/g,
+          '$2'
+        )
+        localStorage.setItem('vditorHtml', hl)
       }, 3000)
     },
     onloadCallback(oEvent) {
